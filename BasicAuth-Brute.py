@@ -14,6 +14,7 @@ if len(argv) != 2:
 	exit(1)
 
 wordlist = open(argv[1], "r")
+# Here where you have to put your url (Path to the login page)
 url = 'http://172.16.122.2/secret'
 words = wordlist.readlines()
 
