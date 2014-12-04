@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # Author: Boumediene Kaddour
+# Country: Algeria (Maghnia)
 # Date: 04/12/2014
 # Purpose: ducational purpose (Cracking Basic Authentication)
 
